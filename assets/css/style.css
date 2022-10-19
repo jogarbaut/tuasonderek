@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* Variables */
+:root {
+    --c-brand: #c4b35e;
+    --c-brand-rgb: 196, 179, 94;
+    --c-dark: black;
+    --c-body: #868992;
+    --f-main: "Montserrat", sans-serif;
+    --transition: all .6s cubic-bezier(.165, .84, .44, 1);
+    --shadow: 0px 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Reset & Helpers*/
+body {
+    padding-top: 0px;
+    margin: 0;
+    font-family: var(--f-main);
+    color: var(--c-body);
+    line-height: 1.7;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    font-weight: 700;
+    color: var(--c-dark);
+}
+
+a {
+    text-decoration: none;
+    color: var(--c-dark);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--c-brand);
+}
+
+img {
+    width: 100%;
+}
+
+.section-padding {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.text-brand {
+    color: var(--c-brand);
+}
+
+.section-title {
+    max-width: 560px;
+    margin: 0 auto 60px auto;
+}
+
+.section-title .line {
+    width: 150px;
+    height: 2px;
+    background-color: var(--c-brand);
+    display: inline-block;
+}
+
+.section-connector {
+    position: relative;
+}
+
+.section-connector::after {
+    content: '';
+    width: 2px;
+    height: 100px;
+    background-color: var(--c-brand);
+    position: absolute;
+    top: -30px;
+    left: 50%;
+}
+
+.sub-section-row {
+    margin-bottom: 30px;
+}
+
+.sub-section-title {
+    max-width: 560px;
+    margin: 0 auto 10px auto;
+}
+
+.sub-section-title p {
+    margin-bottom: 0px;
+}
+
+.sub-section-title .line {
+    width: 90px;
+    height: 2px;
+    background-color: var(--c-brand);
+    display: inline-block;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+iframe {
+    width: 100%;
+    height: 275px;
+}
+
+/* Navbar */
+.navbar {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    transition: var(--transition);
+}
+
+.navbar.scrolled {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    box-shadow: var(--shadow);
+}
+
+.navbar-toggler {
+    border-radius: 0;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar .navbar-nav .nav-link {
+    font-weight: 700;
+    color: var(--c-dark);
+    margin: 0 10px;
+}
+
+.navbar .navbar-nav .nav-link:hover, .navbar .navbar-nav .nav-link.active {
+    color: var(--c-brand);
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--c-dark);
+}
+
+.social-icon {
+    width: 36px;
+    height: 36px;
+    background-color: var(--c-brand);
+    color: white;
+    border: 2px solid var(--c-brand);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 6px;
+}
+
+.social-icon:hover {
+    background-color: transparent;
+}
+
+/* Button */
+.btn {
+    padding: 10px;
+    border-radius: 0;
+    border-width: 2px;
+    font-weight: 500;
+}
+
+.btn-brand, .btn-brand:focus {
+    background-color: var(--c-brand);
+    color: white;
+    border-color: var(--c-brand);
+}
+
+.btn-brand:hover {
+    background-color: white;
+    color: var(--c-brand);
+    border-color: var(--c-brand);
+}
+
+/* Home */
+#home {
+    position: relative;
+}
+
+#home .container {
+    margin-bottom: 15%;
+}
+
+#home::before {
+    content: "";
+    background-image: url(../img/headshot.jpeg);
+    background-position: top center;
+    background-size: cover;
+    opacity: .6;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+#home .landing-text {
+    position: relative;
+    margin-top: 40%;
+}
+
+#home .landing-text .background-mask {
+    background-color: rgba(0, 0, 0, .75);
+    padding: 20px;
+}
+
+/* Updates */
+/* .twitter-timeline {
+    padding-left: 10%;
+    padding-right: 10%;
+} */
+
+/* Services */
+.service-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--c-brand);
+    color: white;
+    font-size: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+.custom-link span {
+    font-weight: 700;
+}
+
+.custom-link i {
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--c-brand);
+    border-radius: 100px;
+    color: white;
+    margin-left: 6px;
+    transition: var(--transition);
+}
+
+.custom-link:hover i {
+    transform: translateX(5px);
+}
+
+/* Project */
+.project {
+    overflow: hidden;
+    position: relative;
+}
+
+.project .content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--c-brand);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project img {
+    max-height: 275px;
+}
+
+.project img, .project .content {
+    transition: var(--transition);
+}
+
+.project:hover .content {
+    top: 0;
+}
+.project:hover .img {
+    transform: translateY(-100%);
+}
+
+/* Client */
+.client {
+    margin-top: -1px;
+    margin-left: -1px;
+}
+.client img {
+    opacity: 0.75;
+    height: 30px;
+}
+
+/* Bio */
+.bio {
+    position: relative;
+}
+
+.bio::before {
+    content: '';
+    height: 100%;
+    width: 1px;
+    background-color: rgba(var(--c-brand-rgb), 0.4);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.bio::after {
+    content: '';
+    height: 14px;
+    width: 14px;
+    background-color: var(--c-brand);
+    position: absolute;
+    left: -7px;
+    top: 0;
+}
+
+/* Gamelog */
+#gamelog thead {
+    position: sticky; 
+    top: 0; 
+    z-index: 1;
+    text-align: left;
+    background-color: var(--c-brand);
+    color: white;
+}
+
+#gamelog td {
+    text-align: left;
+    white-space: nowrap;
+}
+
+#gaemlog .table-responsive {
+    overflow: auto;
+}
+
+/* Contact */
+#contact .form-control {
+    border-radius: 0;
+}
+
+#contact .form-control:focus {
+    box-shadow: none;
+    border-color: var(--c-brand);
+}
+
+#contact input.form-control {
+    height: 44px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--c-dark);
+    padding-top: 75px;
+}
+
+footer h4 {
+    color: white;
+}
+
+footer .text-white {
+    color: white;
+}
+
+footer p, footer li, footer li a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-top {
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/* Stats Chart */
+.btn-stats { 
+    width: 80%;
+    height: 100%;
+}
+
+.btn-stats {
+    font-size: .85rem;
+}
+
+#stats-chart-container {
+    margin-top: 50px;
+    height: 675px;
+    width: 65%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+#shooting-split-container {
+    height: 65%;
+    width: 40%;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    #blog, #updates, #bio, #stats, #stats-summary, #contact, footer {
+        padding-left: 7.5%;
+        padding-right: 7.5%;
+    }
+
+    .btn-stats {
+        font-size: .5rem;
+        width: 100%;
+    }
+
+    #stats-chart-container {
+        height: 450px;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    #shooting-split-container {
+        height: 100%;
+        width: 100%;
+    }
+
+    #gamelog {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    #gamelog tr {
+        font-size: .5rem;
+    }
+
+    iframe {
+        width: 100%;
+        height: 250px;
+    }
+    
+    .twitter-header {
+        font-size: .85rem;
+    }
+
+    .blog-post-content {
+        font-size: .75rem;
+    }
+
+}
