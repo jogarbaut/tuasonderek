@@ -186,7 +186,7 @@ iframe {
 
 #home::before {
     content: "";
-    background-image: url(../img/headshot.jpeg);
+    background-image: url(../img/holiday_hoops_2.jpeg);
     background-position: top center;
     background-size: cover;
     opacity: .6;
