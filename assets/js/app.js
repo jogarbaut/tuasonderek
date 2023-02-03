@@ -146,6 +146,14 @@ function displayChart(catIndex) {
                     intersect: false,
                     mode: 'index',
                 },
+                elements: {
+                    line: {
+                        borderWidth: 1.5
+                    },
+                    point: {
+                        radius: 1.5
+                    }
+                },
                 scales: {
                     x: {
                         display: true,
@@ -153,11 +161,11 @@ function displayChart(catIndex) {
                         ticks: {
                             font: function(context) {
                                 var width = context.chart.width;
-                                var size = Math.round(width/32);
+                                var size = Math.round(width/37.5);
                                 if ( width >= 400 ) {
                                     return {
                                         weight: 'normal',
-                                        size: 10
+                                        size: 12
                                     }
                                 } else {
                                     return {

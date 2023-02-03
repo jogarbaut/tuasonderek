@@ -418,9 +418,14 @@ footer ul {
         padding-left: 16px;
     }
 
-    #blog, #updates, #bio, #stats, #stats-summary, #contact, footer {
+    #blog, #updates, #bio, #stats-summary, #contact, footer {
         padding-left: 7.5%;
         padding-right: 7.5%;
+    }
+
+    #stats { 
+        padding-left: 1.5%;
+        padding-right: 1.5%;
     }
 
     .btn-stats {
